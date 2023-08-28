@@ -17,12 +17,16 @@
                 text-decoration: none;
                 color: black;
                 padding: 6px 14px;
-                transition: 300ms;
+                transition: background-color 300ms;
                 border-radius: 4px;
             }
 
             .navbarLink:hover {
                 background-color: lightgray;
+            }
+
+            a.active {
+                color: green;
             }
         }
     }
