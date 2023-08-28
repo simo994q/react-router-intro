@@ -18,7 +18,8 @@ export function Navbar() {
                     return (
                         <li key={index}><NavLink to={item.url} className={style.navbarLink} style={({ isActive }) => {
                             return {
-                                borderBottom: isActive ? "2px solid black" : ""
+                                borderBottom: isActive ? "2px solid blue" : "",
+                                color: isActive ? 'blue' : 'black'
                             };
                         }}>{item.page}</NavLink></li>
                     )
