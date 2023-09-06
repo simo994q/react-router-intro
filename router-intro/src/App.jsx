@@ -8,20 +8,25 @@ import { ContactPage } from './pages/ContactPage/ContactPage'
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage'
 import { StorePage } from './pages/StorePage/StorePage'
 
+
+import { UserContextProvider } from './context/UserContext'
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<MainLayout/>}>
-          <Route index element={<HomePage/>}/>
-          <Route path='/about' element={<AboutPage/>}/>
-          <Route path='/contact' element={<ContactPage/>}/>
-          <Route path='/store' element={<StorePage/>}/>
-          <Route path='*' element={<NotFoundPage/>}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-      )
+    <UserContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='/store' element={<StorePage />} />
+            <Route path='*' element={<NotFoundPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </UserContextProvider>
+  )
 }
 
 export default App
